@@ -1,20 +1,12 @@
 
 public class SistemaSuporte {
 
-    private String nome;
-    private double versao;
-    private String tecnico;
-    private int qtdChamadosAbertos;
-    private String status;
+    private String nome = "IT Solutions";
+    private double versao = 1.0;
+    private String tecnico = "Pedro Dias";
+    private int qtdChamadosAbertos = 0;
+    private String status = "Ativo";
 
-    //construtor
-    public SistemaSuporte(String nome, double versao, String tecnico, String status){
-        this.nome = nome;
-        this.versao = versao;
-        this.tecnico = tecnico;
-        this.status = status;
-        this.qtdChamadosAbertos = 0;
-    }
 
     public void VerificarChamados(){
         if(qtdChamadosAbertos > 0){
@@ -52,11 +44,12 @@ public class SistemaSuporte {
     }
 
     public static void main(String[] args) {
-        SistemaSuporte sistemaSuporte = new SistemaSuporte("IT Solutions", 1.0, "Pedro Dias", "Ativo");
+        SistemaSuporte sistemaSuporte = new SistemaSuporte();
         
         sistemaSuporte.setQtdChamadosAbertos(5);
         sistemaSuporte.VerificarChamados();
 
+        System.out.println("---------SISTEMA IT SOLUTIONS---------");
         System.out.println(" nome do sistema: " + sistemaSuporte.getNome());
         System.out.println(" técnico responsável: " + sistemaSuporte.getNomeTecnico());
         System.out.println(" versão do sistema atual é " + sistemaSuporte.getVersao());
