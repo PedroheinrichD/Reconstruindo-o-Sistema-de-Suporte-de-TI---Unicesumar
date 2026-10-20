@@ -1,15 +1,11 @@
 public class Principal {
     public static void main(String[] args) {
-        Computador computador1 = new Computador("PAT-0001", "Dell OptiPlex 7010", "Windows 11");
-        Computador computador2 = new Computador("PAT-0002", "Lenovo ThinkCentre", "Windows 11");
-    
-        
-        computador1.ligar();
-        computador1.exibirInformacoes();
+        Computador computador = new Computador("PAT-0001", "Dell OptiPlex 7010", "Windows 11");
+        Tecnico tecnico = new Tecnico("Pedro Dias", "Desenvolvedor Back-end");
 
-        computador2.ligar();
-        computador2.exibirInformacoes();
+        Chamado chamado = new Chamado("Computador não liga.", "Aberto.", computador, tecnico);
         
-        computador1.desligar();
+        System.out.println("Chamado " + chamado.getNumero() + " Problema: " + chamado.getDescricao() + " status: " + chamado.getStatus() + " computador com defeito: " + chamado.getComputador().getModelo() + " para o técnico " + chamado.getTecnico().getNome());
+        
     }
 }

@@ -40,4 +40,9 @@ public class Computador {
         System.out.println("Sistema Operacional " + sistemaOperacional);
         System.out.println("____________________________");
     }
+
+
+    public String getModelo() {
+        return modelo;
+    }
 }
