@@ -6,10 +6,14 @@ public class Principal {
         Tecnico tecnico2 = new TecnicoSoftware("João", "Tecnico de Software");
 
 
-        Chamado chamado = new Chamado("Problema no hardware.", "Aberto.", computador, tecnico1);
+        Chamado chamado1 = new Chamado("Problema no hardware.", "Aberto.", computador, tecnico1);
+        Chamado chamado2 = new Chamado("Sistema operacional apresentando lentidão.", "Em atendimento..", computador, tecnico2);
+        Chamado chamado3 = new Chamado("Teclado não está funcionando.", "Aberto.", computador, tecnico1);
         
-        System.out.println("Chamado " + chamado.getNumero() + " Problema: " + chamado.getDescricao() + " status: " + chamado.getStatus() + " computador com defeito: " + chamado.getComputador().getModelo() + " para o técnico " + chamado.getTecnico().getNome());
-        tecnico1.realizarAtendimento();
-        tecnico2.realizarAtendimento();
+        Chamado.handleChamados();
+
+
+       tecnico1.realizarAtendimento();
+       tecnico2.realizarAtendimento();
     }
 }
